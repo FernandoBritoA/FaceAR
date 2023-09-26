@@ -54,8 +54,8 @@
 		BFE6ED4B2AC3558400471F75 /* FaceAR */ = {
 			isa = PBXGroup;
 			children = (
-				BFE6ED632AC35B2800471F75 /* Resources */,
 				BFE6ED602AC35A0B00471F75 /* Controllers */,
+				BFE6ED632AC35B2800471F75 /* Resources */,
 				BFE6ED552AC3558500471F75 /* Assets.xcassets */,
 				BFE6ED572AC3558500471F75 /* LaunchScreen.storyboard */,
 				BFE6ED5A2AC3558500471F75 /* Info.plist */,

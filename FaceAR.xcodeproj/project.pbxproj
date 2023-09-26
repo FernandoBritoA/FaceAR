@@ -12,6 +12,7 @@
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
 		BFE6ED592AC3558500471F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED572AC3558500471F75 /* LaunchScreen.storyboard */; };
 		BFE6ED622AC35A4400471F75 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED612AC35A4400471F75 /* VideoViewController.swift */; };
+		BFE6ED662AC363F900471F75 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED652AC363F900471F75 /* RecordButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BFE6ED582AC3558500471F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFE6ED5A2AC3558500471F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFE6ED612AC35A4400471F75 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		BFE6ED652AC363F900471F75 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		BFE6ED4B2AC3558400471F75 /* FaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				BFE6ED642AC363D200471F75 /* Views */,
 				BFE6ED602AC35A0B00471F75 /* Controllers */,
 				BFE6ED632AC35B2800471F75 /* Resources */,
 				BFE6ED552AC3558500471F75 /* Assets.xcassets */,
@@ -78,6 +81,14 @@
 				BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BFE6ED642AC363D200471F75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFE6ED652AC363F900471F75 /* RecordButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE6ED662AC363F900471F75 /* RecordButton.swift in Sources */,
 				BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */,
 				BFE6ED622AC35A4400471F75 /* VideoViewController.swift in Sources */,
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,

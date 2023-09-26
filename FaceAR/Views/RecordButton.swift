@@ -7,23 +7,70 @@
 
 import UIKit
 
+enum RecordState {
+    case active
+    case inactive
+}
+
 class RecordButton: UIButton {
-    private var isRecording: Bool = false
+    private var size: Double = 0.0
 
     init(size: Double) {
         super.init(frame: CGRect(x: 0, y: 0, width: size, height: size))
 
-        let largeConfig = UIImage.SymbolConfiguration(pointSize: size, weight: .regular)
-        let inactiveImage = UIImage(systemName: "record.circle", withConfiguration: largeConfig)
-        let activeImage = UIImage(systemName: "record.circle.fill", withConfiguration: largeConfig)
+        self.size = size
 
-        tintColor = .white
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress(gesture:)))
+
         layer.cornerRadius = size / 2
-        setImage(inactiveImage, for: .normal)
-        setImage(activeImage, for: .highlighted)
+        addGestureRecognizer(longPressGesture)
+
+        updateButtonUI(to: .inactive)
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+}
+
+extension RecordButton {
+    private func updateButtonUI(to state: RecordState) {
+        var image: UIImage?
+        let config = UIImage.SymbolConfiguration(pointSize: size, weight: .regular)
+
+        switch state {
+        case .active:
+            tintColor = .systemRed
+
+            UIView.animate(withDuration: 0.5) {
+                self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            }
+
+            image = UIImage(systemName: "record.circle.fill", withConfiguration: config)
+
+        case .inactive:
+            tintColor = .white
+
+            UIView.animate(withDuration: 0.5) {
+                self.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+
+            image = UIImage(systemName: "record.circle", withConfiguration: config)
+        }
+
+        setImage(image, for: .normal)
+    }
+
+    @objc private func longPress(gesture: UILongPressGestureRecognizer) {
+        switch gesture.state {
+        case .began:
+            updateButtonUI(to: .active)
+
+        case .ended:
+            updateButtonUI(to: .inactive)
+
+        default:
+            break
+        }
     }
 }

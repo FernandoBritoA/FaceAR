@@ -28,9 +28,9 @@ class VideoViewController: UIViewController {
         carouselView.translatesAutoresizingMaskIntoConstraints = false
         let carouselViewConstraints = [
             carouselView.heightAnchor.constraint(equalToConstant: 100),
+            carouselView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            carouselView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             carouselView.bottomAnchor.constraint(equalTo: recordButton.topAnchor),
-            carouselView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            carouselView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
         ]
 
         recordButton.translatesAutoresizingMaskIntoConstraints = false

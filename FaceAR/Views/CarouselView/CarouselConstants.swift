@@ -13,5 +13,5 @@ let availableSpace: CGFloat = DimensionsK.screenWidth - (DimensionsK.horizontalS
 enum CarouselK {
     static let itemSpacing: CGFloat = 20.0
     static let itemSize: CGFloat = (availableSpace - (itemSpacing * (maxElementsVisible - 1))) / maxElementsVisible
-    static let horizontalInset = (itemSize + itemSpacing) * 2
+    static let horizontalInset = itemSize * 2 + itemSpacing * 3
 }

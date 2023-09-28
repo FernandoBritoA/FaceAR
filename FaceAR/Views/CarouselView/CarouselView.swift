@@ -31,6 +31,7 @@ class CarouselView: UIView {
         super.layoutSubviews()
 
         self.setupCarousel()
+        self.setupSelectedItemLayer()
     }
 
     private func setupCarousel() {
@@ -41,6 +42,25 @@ class CarouselView: UIView {
 
         self.carousel.delegate = self
         self.carousel.dataSource = self
+    }
+
+    private func setupSelectedItemLayer() {
+        let size = CarouselK.itemSize * 1.2
+        let positionOffset = size / 2
+
+        let xPosition = (frame.width / 2.0) - positionOffset
+        let yPosition = (frame.height / 2.0) - positionOffset
+        print(frame.width)
+        print(DimensionsK.screenWidth)
+
+        let circleLayer = CALayer()
+
+        circleLayer.borderWidth = 4
+        circleLayer.cornerRadius = size / 2
+        circleLayer.borderColor = UIColor.systemCyan.cgColor
+        circleLayer.frame = CGRect(x: xPosition, y: yPosition, width: size, height: size)
+
+        self.layer.insertSublayer(circleLayer, at: 0)
     }
 }
 

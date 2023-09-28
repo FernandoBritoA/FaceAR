@@ -50,8 +50,6 @@ class CarouselView: UIView {
 
         let xPosition = (frame.width / 2.0) - positionOffset
         let yPosition = (frame.height / 2.0) - positionOffset
-        print(frame.width)
-        print(DimensionsK.screenWidth)
 
         let circleLayer = CALayer()
 

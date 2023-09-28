@@ -33,7 +33,7 @@ struct CarouselViewModel {
     }
 
     public func calculateIndex(position: CGFloat, snapToPosition: (Int) -> Void) {
-        let index: CGFloat = position / CarouselK.itemSize
+        let index: CGFloat = position / (CarouselK.itemSize + CarouselK.itemSpacing)
 
         // Determine the delta (change) from current index
         let delta: CGFloat = index - CGFloat(currentIndex)

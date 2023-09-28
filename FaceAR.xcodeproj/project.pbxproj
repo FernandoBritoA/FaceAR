@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF7FC7712AC500C300EBDF11 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7702AC500C300EBDF11 /* CarouselView.swift */; };
+		BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */; };
+		BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF7FC7702AC500C300EBDF11 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF7FC76F2AC4FF9400EBDF11 /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				BF7FC7702AC500C300EBDF11 /* CarouselView.swift */,
+				BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */,
+				BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
 		BFE6ED402AC3558400471F75 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +102,7 @@
 		BFE6ED642AC363D200471F75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF7FC76F2AC4FF9400EBDF11 /* CarouselView */,
 				BFE6ED652AC363F900471F75 /* RecordButton.swift */,
 			);
 			path = Views;
@@ -161,8 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7FC7712AC500C300EBDF11 /* CarouselView.swift in Sources */,
+				BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */,
 				BFE6ED662AC363F900471F75 /* RecordButton.swift in Sources */,
 				BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */,
+				BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */,
 				BFE6ED622AC35A4400471F75 /* VideoViewController.swift in Sources */,
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,
 			);

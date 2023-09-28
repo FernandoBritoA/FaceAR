@@ -8,11 +8,13 @@
 import UIKit
 
 class VideoViewController: UIViewController {
-    let recordButton = RecordButton(size: 70.0)
+    private let carouselView = CarouselView()
+    private let recordButton = RecordButton(size: 70.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.addSubview(carouselView)
         view.addSubview(recordButton)
     }
 
@@ -22,13 +24,21 @@ class VideoViewController: UIViewController {
         setupConstraints()
     }
 
-    func setupConstraints() {
+    private func setupConstraints() {
+        carouselView.translatesAutoresizingMaskIntoConstraints = false
+        let carouselViewConstraints = [
+            carouselView.heightAnchor.constraint(equalToConstant: 100),
+            carouselView.bottomAnchor.constraint(equalTo: recordButton.topAnchor),
+            carouselView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            carouselView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+        ]
+
         recordButton.translatesAutoresizingMaskIntoConstraints = false
         let recordButtonConstraints = [
             recordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            recordButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -10)
+            recordButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -10),
         ]
 
-        NSLayoutConstraint.activate(recordButtonConstraints)
+        NSLayoutConstraint.activate(carouselViewConstraints + recordButtonConstraints)
     }
 }

@@ -8,14 +8,17 @@
 import UIKit
 
 class CarouselView: UIView {
-    private let viewModel = CarouselViewModel()
+    var viewModel = CarouselViewModel()
 
-    private var carousel: UICollectionView = {
+    var carousel: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 50.0
-        layout.itemSize = CGSize(width: 50, height: 50)
-        
+        layout.minimumLineSpacing = CarouselK.itemSpacing
+        layout.itemSize = CGSize(width: CarouselK.itemSize, height: CarouselK.itemSize)
+
+        let horizontalInset = CarouselK.horizontalInset
+        layout.sectionInset = UIEdgeInsets(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
+
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .clear

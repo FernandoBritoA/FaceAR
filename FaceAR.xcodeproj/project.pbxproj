@@ -10,6 +10,9 @@
 		BF7FC7712AC500C300EBDF11 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7702AC500C300EBDF11 /* CarouselView.swift */; };
 		BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */; };
 		BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */; };
+		BF7FC7772AC5306E00EBDF11 /* CarouselView+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7762AC5306E00EBDF11 /* CarouselView+ScrollView.swift */; };
+		BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7782AC5316100EBDF11 /* CarouselConstants.swift */; };
+		BF7FC77B2AC53AD300EBDF11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC77A2AC53AD300EBDF11 /* Constants.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 		BF7FC7702AC500C300EBDF11 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		BF7FC7762AC5306E00EBDF11 /* CarouselView+ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselView+ScrollView.swift"; sourceTree = "<group>"; };
+		BF7FC7782AC5316100EBDF11 /* CarouselConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselConstants.swift; sourceTree = "<group>"; };
+		BF7FC77A2AC53AD300EBDF11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 				BF7FC7702AC500C300EBDF11 /* CarouselView.swift */,
 				BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */,
 				BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */,
+				BF7FC7762AC5306E00EBDF11 /* CarouselView+ScrollView.swift */,
+				BF7FC7782AC5316100EBDF11 /* CarouselConstants.swift */,
 			);
 			path = CarouselView;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 			children = (
 				BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */,
 				BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */,
+				BF7FC77A2AC53AD300EBDF11 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -183,8 +192,11 @@
 				BFE6ED662AC363F900471F75 /* RecordButton.swift in Sources */,
 				BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */,
 				BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */,
+				BF7FC77B2AC53AD300EBDF11 /* Constants.swift in Sources */,
 				BFE6ED622AC35A4400471F75 /* VideoViewController.swift in Sources */,
+				BF7FC7772AC5306E00EBDF11 /* CarouselView+ScrollView.swift in Sources */,
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,
+				BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

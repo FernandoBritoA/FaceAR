@@ -26,7 +26,7 @@ class VideoViewController: UIViewController {
         recordButton.translatesAutoresizingMaskIntoConstraints = false
         let recordButtonConstraints = [
             recordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            recordButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
+            recordButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -10)
         ]
 
         NSLayoutConstraint.activate(recordButtonConstraints)

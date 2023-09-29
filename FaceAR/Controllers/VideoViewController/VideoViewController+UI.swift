@@ -1,27 +1,18 @@
 //
-//  VideoViewController.swift
+//  VideoViewController+UI.swift
 //  FaceAR
 //
-//  Created by Fernando Brito on 26/09/23.
+//  Created by Fernando Brito on 29/09/23.
 //
 
 import UIKit
 
-class VideoViewController: UIViewController {
-    private let carouselView = CarouselView()
-    private let recordButton = RecordButton(size: 70.0)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.addSubview(carouselView)
-        view.addSubview(recordButton)
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+extension VideoViewController {
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
 
         setupConstraints()
+        sceneView.frame = view.bounds
     }
 
     private func setupConstraints() {

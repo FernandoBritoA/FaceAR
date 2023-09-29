@@ -13,6 +13,7 @@
 		BF7FC7772AC5306E00EBDF11 /* CarouselView+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7762AC5306E00EBDF11 /* CarouselView+ScrollView.swift */; };
 		BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7782AC5316100EBDF11 /* CarouselConstants.swift */; };
 		BF7FC77B2AC53AD300EBDF11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC77A2AC53AD300EBDF11 /* Constants.swift */; };
+		BF7FC7802AC7841400EBDF11 /* VideoViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC77F2AC7841400EBDF11 /* VideoViewController+UI.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		BF7FC7762AC5306E00EBDF11 /* CarouselView+ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselView+ScrollView.swift"; sourceTree = "<group>"; };
 		BF7FC7782AC5316100EBDF11 /* CarouselConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselConstants.swift; sourceTree = "<group>"; };
 		BF7FC77A2AC53AD300EBDF11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF7FC77F2AC7841400EBDF11 /* VideoViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+UI.swift"; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,15 @@
 				BF7FC7782AC5316100EBDF11 /* CarouselConstants.swift */,
 			);
 			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		BF7FC77C2AC76E6700EBDF11 /* VideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BFE6ED612AC35A4400471F75 /* VideoViewController.swift */,
+				BF7FC77F2AC7841400EBDF11 /* VideoViewController+UI.swift */,
+			);
+			path = VideoViewController;
 			sourceTree = "<group>";
 		};
 		BFE6ED402AC3558400471F75 = {
@@ -93,7 +104,7 @@
 		BFE6ED602AC35A0B00471F75 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BFE6ED612AC35A4400471F75 /* VideoViewController.swift */,
+				BF7FC77C2AC76E6700EBDF11 /* VideoViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 				BFE6ED622AC35A4400471F75 /* VideoViewController.swift in Sources */,
 				BF7FC7772AC5306E00EBDF11 /* CarouselView+ScrollView.swift in Sources */,
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,
+				BF7FC7802AC7841400EBDF11 /* VideoViewController+UI.swift in Sources */,
 				BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

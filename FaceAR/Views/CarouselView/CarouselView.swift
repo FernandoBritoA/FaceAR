@@ -76,4 +76,8 @@ extension CarouselView: UICollectionViewDelegate, UICollectionViewDataSource {
 
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        snapToPositon(index: indexPath.row)
+    }
 }

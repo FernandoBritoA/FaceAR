@@ -22,7 +22,7 @@ extension CarouselView {
         viewModel.calculateIndex(position: position, snapToPosition: self.snapToPositon)
     }
 
-    private func snapToPositon(index: Int) {
+    func snapToPositon(index: Int) {
         viewModel.updateIndex(newValue: index)
 
         self.carousel.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)

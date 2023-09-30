@@ -19,14 +19,18 @@ class VideoViewController: UIViewController {
         view.addSubview(sceneView)
         view.addSubview(carouselView)
         view.addSubview(recordButton)
+
+        sceneView.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        guard ARFaceTrackingConfiguration.isSupported else { return }
+
         let configuration = ARFaceTrackingConfiguration()
 
-        sceneView.session.run(configuration)
+        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 
     override func viewWillDisappear(_ animated: Bool) {

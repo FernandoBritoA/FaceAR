@@ -24,6 +24,7 @@ extension CarouselView {
 
     func snapToPositon(index: Int) {
         viewModel.updateIndex(newValue: index)
+        delegete?.carouselView(self, didSelectItemAt: index)
 
         self.carousel.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
     }

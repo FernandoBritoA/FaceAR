@@ -16,6 +16,9 @@
 		BF7FC7802AC7841400EBDF11 /* VideoViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC77F2AC7841400EBDF11 /* VideoViewController+UI.swift */; };
 		BF7FC7822AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7812AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift */; };
 		BF7FC7852AC78CAA00EBDF11 /* MoustacheSCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7842AC78CAA00EBDF11 /* MoustacheSCNNode.swift */; };
+		BF7FC7872AC8EE0F00EBDF11 /* CarouselViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7862AC8EE0F00EBDF11 /* CarouselViewDelegate.swift */; };
+		BF7FC7892AC8F01300EBDF11 /* CarouselView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7882AC8F01300EBDF11 /* CarouselView+CollectionView.swift */; };
+		BF7FC78B2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 		BF7FC77F2AC7841400EBDF11 /* VideoViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+UI.swift"; sourceTree = "<group>"; };
 		BF7FC7812AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		BF7FC7842AC78CAA00EBDF11 /* MoustacheSCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoustacheSCNNode.swift; sourceTree = "<group>"; };
+		BF7FC7862AC8EE0F00EBDF11 /* CarouselViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewDelegate.swift; sourceTree = "<group>"; };
+		BF7FC7882AC8F01300EBDF11 /* CarouselView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselView+CollectionView.swift"; sourceTree = "<group>"; };
+		BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+CarouselViewDelegate.swift"; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,8 @@
 				BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */,
 				BF7FC7762AC5306E00EBDF11 /* CarouselView+ScrollView.swift */,
 				BF7FC7782AC5316100EBDF11 /* CarouselConstants.swift */,
+				BF7FC7862AC8EE0F00EBDF11 /* CarouselViewDelegate.swift */,
+				BF7FC7882AC8F01300EBDF11 /* CarouselView+CollectionView.swift */,
 			);
 			path = CarouselView;
 			sourceTree = "<group>";
@@ -73,6 +81,7 @@
 				BFE6ED612AC35A4400471F75 /* VideoViewController.swift */,
 				BF7FC77F2AC7841400EBDF11 /* VideoViewController+UI.swift */,
 				BF7FC7812AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift */,
+				BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */,
 			);
 			path = VideoViewController;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 				BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */,
 				BFE6ED662AC363F900471F75 /* RecordButton.swift in Sources */,
 				BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */,
+				BF7FC7892AC8F01300EBDF11 /* CarouselView+CollectionView.swift in Sources */,
 				BF7FC7822AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift in Sources */,
 				BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */,
 				BF7FC77B2AC53AD300EBDF11 /* Constants.swift in Sources */,
@@ -225,6 +235,8 @@
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,
 				BF7FC7802AC7841400EBDF11 /* VideoViewController+UI.swift in Sources */,
 				BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */,
+				BF7FC78B2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift in Sources */,
+				BF7FC7872AC8EE0F00EBDF11 /* CarouselViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

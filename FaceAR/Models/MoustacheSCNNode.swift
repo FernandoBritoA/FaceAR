@@ -34,3 +34,12 @@ class MoustacheSCNNode: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+extension MoustacheSCNNode {
+    func updateImage(index: Int) {
+        if let plane = geometry as? SCNPlane {
+            plane.firstMaterial?.diffuse.contents = UIImage(named: "moustache\(index)")
+            plane.firstMaterial?.isDoubleSided = true
+        }
+    }
+}

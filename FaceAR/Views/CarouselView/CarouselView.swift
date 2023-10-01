@@ -8,6 +8,8 @@
 import UIKit
 
 class CarouselView: UIView {
+    public weak var delegete: CarouselViewDelegate?
+
     var viewModel = CarouselViewModel()
 
     var carousel: UICollectionView = {
@@ -59,25 +61,5 @@ class CarouselView: UIView {
         circleLayer.frame = CGRect(x: xPosition, y: yPosition, width: size, height: size)
 
         self.layer.insertSublayer(circleLayer, at: 0)
-    }
-}
-
-extension CarouselView: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.viewModel.getNumberOfItems()
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarouselCell.identifier, for: indexPath) as? CarouselCell else {
-            return UICollectionViewCell()
-        }
-
-        cell.configure(with: self.viewModel.getElement(by: indexPath))
-
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        snapToPositon(index: indexPath.row)
     }
 }

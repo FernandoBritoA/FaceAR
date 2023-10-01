@@ -10,6 +10,7 @@ import SceneKit
 
 class MoustacheSCNNode: SCNNode {
     static let uniqueName: String = "moustache"
+    private var defaultYPosition: Float = 0.0
 
     init(with anchor: ARFaceAnchor) {
         super.init()
@@ -25,10 +26,12 @@ class MoustacheSCNNode: SCNNode {
         geometry = plane
 
         // Node Position
-        let moustacheVerticeIndex = 0
+        let moustacheVerticeIndex = 1
+
         let vertice = anchor.geometry.vertices[moustacheVerticeIndex]
 
         position = SCNVector3(vertice)
+        defaultYPosition = vertice.y
     }
 
     @available(*, unavailable)
@@ -39,9 +42,40 @@ class MoustacheSCNNode: SCNNode {
 
 extension MoustacheSCNNode {
     func updateImage(index: Int) {
-        if let plane = geometry as? SCNPlane {
-            plane.firstMaterial?.diffuse.contents = UIImage(named: "moustache\(index)")
-            plane.firstMaterial?.isDoubleSided = true
+        guard let plane = geometry as? SCNPlane else {
+            return
         }
+
+        plane.firstMaterial?.diffuse.contents = UIImage(named: "moustache\(index)")
+        plane.firstMaterial?.isDoubleSided = true
+
+        switch index {
+        case 2:
+            scale(to: 1.5)
+            translateY(offset: -0.026)
+        case 4:
+            scale(to: 0.8)
+            translateY(offset: 0.003)
+        case 5:
+            scale(to: 0.9)
+            translateY(offset: 0.012)
+        case 6:
+            scale(to: 1.5)
+            translateY(offset: -0.012)
+        case 7:
+            scale(to: 1.5)
+            translateY(offset: 0)
+        default:
+            scale(to: 1.0)
+            translateY(offset: 0)
+        }
+    }
+
+    private func scale(to value: Float) {
+        scale = SCNVector3(x: value, y: value, z: 1.0)
+    }
+
+    private func translateY(offset: Float) {
+        position = SCNVector3(position.x, defaultYPosition + offset, position.z)
     }
 }

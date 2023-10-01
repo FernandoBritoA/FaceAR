@@ -9,11 +9,13 @@ import ARKit
 import SceneKit
 
 class MoustacheSCNNode: SCNNode {
+    static let uniqueName: String = "moustache"
+
     init(with anchor: ARFaceAnchor) {
         super.init()
 
         // Node Name
-        name = "moustache"
+        name = MoustacheSCNNode.uniqueName
 
         // Node Geometry Image
         let plane = SCNPlane(width: 0.1, height: 0.1)

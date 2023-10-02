@@ -15,8 +15,6 @@ class VideoViewController: UIViewController {
     let carouselView = CarouselView()
     let recordButton = RecordButton(size: 70.0)
 
-    let recordingQueue = DispatchQueue(label: "recordingThread", attributes: .concurrent)
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

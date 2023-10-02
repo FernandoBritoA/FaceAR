@@ -81,7 +81,7 @@ extension RecordButton {
             delegete?.recordButton(self, didChangeState: .inactive)
 
         default:
-            print(gesture.state)
+            break
         }
     }
 

@@ -20,9 +20,11 @@ extension VideoViewController: RecordButtonDelegate {
         switch state {
             case .active:
                 recorder.start()
+                carouselView.isHidden = true
 
             case .inactive:
                 recorder.stop()
+                carouselView.isHidden = false
         }
     }
 }

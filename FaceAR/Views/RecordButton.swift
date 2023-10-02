@@ -14,6 +14,7 @@ enum RecordState {
 
 protocol RecordButtonDelegate: AnyObject {
     func recordButton(_ recordButton: RecordButton, didChangeState state: RecordState)
+    func recordButton(_ recordButton: RecordButton, didInvalidGesture isInvalid: Bool)
 }
 
 class RecordButton: UIButton {
@@ -26,9 +27,11 @@ class RecordButton: UIButton {
 
         self.size = size
 
+        let tapPressGesture = UITapGestureRecognizer(target: self, action: #selector(tapPress))
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress(gesture:)))
 
         layer.cornerRadius = size / 2
+        addGestureRecognizer(tapPressGesture)
         addGestureRecognizer(longPressGesture)
 
         updateButtonUI(to: .inactive)
@@ -78,7 +81,11 @@ extension RecordButton {
             delegete?.recordButton(self, didChangeState: .inactive)
 
         default:
-            break
+            print(gesture.state)
         }
+    }
+
+    @objc private func tapPress() {
+        delegete?.recordButton(self, didInvalidGesture: true)
     }
 }

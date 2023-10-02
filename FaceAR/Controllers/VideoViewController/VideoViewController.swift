@@ -9,12 +9,18 @@ import ARKit
 import UIKit
 
 class VideoViewController: UIViewController {
+    var recorder = RecorderViewModel()
+
     let sceneView = ARSCNView()
     let carouselView = CarouselView()
     let recordButton = RecordButton(size: 70.0)
 
+    let recordingQueue = DispatchQueue(label: "recordingThread", attributes: .concurrent)
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        recorder.configure(with: sceneView)
 
         view.addSubview(sceneView)
         view.addSubview(carouselView)
@@ -32,11 +38,15 @@ class VideoViewController: UIViewController {
         let configuration = ARFaceTrackingConfiguration()
 
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+
+        recorder.prepare(with: configuration)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         sceneView.session.pause()
+
+        recorder.forceStop()
     }
 }

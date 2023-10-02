@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		417F893700674E2234FDC825 /* Pods_FaceAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC4629F823C80110E47F743 /* Pods_FaceAR.framework */; };
 		BF7FC7712AC500C300EBDF11 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7702AC500C300EBDF11 /* CarouselView.swift */; };
 		BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */; };
 		BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */; };
@@ -19,6 +20,7 @@
 		BF7FC7872AC8EE0F00EBDF11 /* CarouselViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7862AC8EE0F00EBDF11 /* CarouselViewDelegate.swift */; };
 		BF7FC7892AC8F01300EBDF11 /* CarouselView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC7882AC8F01300EBDF11 /* CarouselView+CollectionView.swift */; };
 		BF7FC78B2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */; };
+		BF96E8B52ACB2BE100ACCCBF /* RecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96E8B42ACB2BE100ACCCBF /* RecorderViewModel.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BC4629F823C80110E47F743 /* Pods_FaceAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECDD25BB701713CD8373112 /* Pods-FaceAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAR.release.xcconfig"; path = "Target Support Files/Pods-FaceAR/Pods-FaceAR.release.xcconfig"; sourceTree = "<group>"; };
 		BF7FC7702AC500C300EBDF11 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		BF7FC7722AC5019600EBDF11 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		BF7FC7742AC510D000EBDF11 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		BF7FC7862AC8EE0F00EBDF11 /* CarouselViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewDelegate.swift; sourceTree = "<group>"; };
 		BF7FC7882AC8F01300EBDF11 /* CarouselView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselView+CollectionView.swift"; sourceTree = "<group>"; };
 		BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+CarouselViewDelegate.swift"; sourceTree = "<group>"; };
+		BF96E8B42ACB2BE100ACCCBF /* RecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewModel.swift; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		BFE6ED5A2AC3558500471F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFE6ED612AC35A4400471F75 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		BFE6ED652AC363F900471F75 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		FA50B92A1792E3BB7D271021 /* Pods-FaceAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAR.debug.xcconfig"; path = "Target Support Files/Pods-FaceAR/Pods-FaceAR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417F893700674E2234FDC825 /* Pods_FaceAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17A9F2BA5EE8367253D4A6A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA50B92A1792E3BB7D271021 /* Pods-FaceAR.debug.xcconfig */,
+				2ECDD25BB701713CD8373112 /* Pods-FaceAR.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		92C5BE3397FC524706372288 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BC4629F823C80110E47F743 /* Pods_FaceAR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF7FC76F2AC4FF9400EBDF11 /* CarouselView */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,11 +118,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BF96E8B32ACB2BCD00ACCCBF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF96E8B42ACB2BE100ACCCBF /* RecorderViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		BFE6ED402AC3558400471F75 = {
 			isa = PBXGroup;
 			children = (
 				BFE6ED4B2AC3558400471F75 /* FaceAR */,
 				BFE6ED4A2AC3558400471F75 /* Products */,
+				17A9F2BA5EE8367253D4A6A2 /* Pods */,
+				92C5BE3397FC524706372288 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +147,7 @@
 		BFE6ED4B2AC3558400471F75 /* FaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				BF96E8B32ACB2BCD00ACCCBF /* ViewModels */,
 				BF7FC7832AC78C7200EBDF11 /* Models */,
 				BFE6ED642AC363D200471F75 /* Views */,
 				BFE6ED602AC35A0B00471F75 /* Controllers */,
@@ -158,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFE6ED5D2AC3558500471F75 /* Build configuration list for PBXNativeTarget "FaceAR" */;
 			buildPhases = (
+				CAB40ED56054DE3A8E234A4D /* [CP] Check Pods Manifest.lock */,
 				BFE6ED452AC3558400471F75 /* Sources */,
 				BFE6ED462AC3558400471F75 /* Frameworks */,
 				BFE6ED472AC3558400471F75 /* Resources */,
+				9862FC2EB113C2F4C364FEF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +253,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9862FC2EB113C2F4C364FEF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR/Pods-FaceAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAR/Pods-FaceAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAR/Pods-FaceAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAB40ED56054DE3A8E234A4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFE6ED452AC3558400471F75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -232,6 +311,7 @@
 				BF7FC77B2AC53AD300EBDF11 /* Constants.swift in Sources */,
 				BFE6ED622AC35A4400471F75 /* VideoViewController.swift in Sources */,
 				BF7FC7772AC5306E00EBDF11 /* CarouselView+ScrollView.swift in Sources */,
+				BF96E8B52ACB2BE100ACCCBF /* RecorderViewModel.swift in Sources */,
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,
 				BF7FC7802AC7841400EBDF11 /* VideoViewController+UI.swift in Sources */,
 				BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */,
@@ -370,6 +450,7 @@
 		};
 		BFE6ED5E2AC3558500471F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA50B92A1792E3BB7D271021 /* Pods-FaceAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,6 +481,7 @@
 		};
 		BFE6ED5F2AC3558500471F75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ECDD25BB701713CD8373112 /* Pods-FaceAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

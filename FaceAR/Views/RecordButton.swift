@@ -12,7 +12,13 @@ enum RecordState {
     case inactive
 }
 
+protocol RecordButtonDelegate: AnyObject {
+    func recordButton(_ recordButton: RecordButton, didChangeState state: RecordState)
+}
+
 class RecordButton: UIButton {
+    public weak var delegete: RecordButtonDelegate?
+
     private var size: Double = 0.0
 
     init(size: Double) {
@@ -65,9 +71,11 @@ extension RecordButton {
         switch gesture.state {
         case .began:
             updateButtonUI(to: .active)
+            delegete?.recordButton(self, didChangeState: .active)
 
         case .ended:
             updateButtonUI(to: .inactive)
+            delegete?.recordButton(self, didChangeState: .inactive)
 
         default:
             break

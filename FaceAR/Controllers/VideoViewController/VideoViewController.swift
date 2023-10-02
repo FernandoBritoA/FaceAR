@@ -26,6 +26,7 @@ class VideoViewController: UIViewController {
 
         sceneView.delegate = self
         carouselView.delegete = self
+        recordButton.delegete = self
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -6,19 +6,16 @@
 //
 
 import ARKit
+import SCNRecorder
 import UIKit
 
 class VideoViewController: UIViewController {
-    var recorder = RecorderViewModel()
-
     let sceneView = ARSCNView()
     let carouselView = CarouselView()
     let recordButton = RecordButton(size: 70.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        recorder.configure(with: sceneView)
 
         view.addSubview(sceneView)
         view.addSubview(carouselView)
@@ -27,6 +24,8 @@ class VideoViewController: UIViewController {
         sceneView.delegate = self
         carouselView.delegete = self
         recordButton.delegete = self
+
+        sceneView.prepareForRecording()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,15 +36,11 @@ class VideoViewController: UIViewController {
         let configuration = ARFaceTrackingConfiguration()
 
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-
-        recorder.prepare(with: configuration)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         sceneView.session.pause()
-
-        recorder.forceStop()
     }
 }

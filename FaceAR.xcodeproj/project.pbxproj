@@ -24,6 +24,7 @@
 		BF96E8BC2ACB34C700ACCCBF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96E8BB2ACB34C700ACCCBF /* UIViewControllerExtension.swift */; };
 		BFAD19DD2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19DC2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift */; };
 		BFAD19E02ACBC1F8008838A7 /* RecordingListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19DF2ACBC1F8008838A7 /* RecordingListViewViewController.swift */; };
+		BFAD19E32ACBC893008838A7 /* RecordingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19E22ACBC893008838A7 /* RecordingListViewModel.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		BF96E8BB2ACB34C700ACCCBF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BFAD19DC2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryExtension.swift; sourceTree = "<group>"; };
 		BFAD19DF2ACBC1F8008838A7 /* RecordingListViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListViewViewController.swift; sourceTree = "<group>"; };
+		BFAD19E22ACBC893008838A7 /* RecordingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListViewModel.swift; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = RecordingListViewController;
 			sourceTree = "<group>";
 		};
+		BFAD19E12ACBC853008838A7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD19E22ACBC893008838A7 /* RecordingListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		BFE6ED402AC3558400471F75 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		BFE6ED4B2AC3558400471F75 /* FaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD19E12ACBC853008838A7 /* ViewModels */,
 				BF7FC7832AC78C7200EBDF11 /* Models */,
 				BFE6ED642AC363D200471F75 /* Views */,
 				BFE6ED602AC35A0B00471F75 /* Controllers */,
@@ -332,6 +343,7 @@
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,
 				BF7FC7802AC7841400EBDF11 /* VideoViewController+UI.swift in Sources */,
 				BF96E8B72ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift in Sources */,
+				BFAD19E32ACBC893008838A7 /* RecordingListViewModel.swift in Sources */,
 				BFAD19E02ACBC1F8008838A7 /* RecordingListViewViewController.swift in Sources */,
 				BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */,
 				BF96E8BC2ACB34C700ACCCBF /* UIViewControllerExtension.swift in Sources */,

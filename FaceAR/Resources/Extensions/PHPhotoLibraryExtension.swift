@@ -40,13 +40,52 @@ extension PHPhotoLibrary {
             }
         }
 
+        PHPhotoLibrary.shared().handleAuthorization { status in
+            switch status {
+                case .authorized:
+                    save()
+                // TODO: Handle other status cases
+                default:
+                    break
+            }
+        }
+    }
+
+    func handleAuthorization(completion: @escaping (PHAuthorizationStatus) -> Void) {
         if PHPhotoLibrary.authorizationStatus(for: .readWrite) == .authorized {
-            save()
+            completion(.authorized)
         } else {
             PHPhotoLibrary.requestAuthorization { status in
-                if status == .authorized {
-                    save()
-                }
+                completion(status)
+            }
+        }
+    }
+}
+
+extension PHAsset {
+    static func fetchVideos(
+        withLocalIdentifiers identifiers: [String],
+        completion: @escaping ([PHAsset]) -> Void)
+    {
+        func fetch() {
+            var assets: [PHAsset] = []
+
+            let fetchResults = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+
+            fetchResults.enumerateObjects { asset, _, _ in
+                assets.append(asset)
+            }
+
+            completion(assets)
+        }
+
+        PHPhotoLibrary.shared().handleAuthorization { status in
+            switch status {
+                case .authorized:
+                    fetch()
+                // TODO: Handle other status cases
+                default:
+                    break
             }
         }
     }

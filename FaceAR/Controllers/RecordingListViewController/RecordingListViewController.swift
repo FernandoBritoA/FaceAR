@@ -1,5 +1,5 @@
 //
-//  RecordingListViewViewController.swift
+//  RecordingListViewController.swift
 //  FaceAR
 //
 //  Created by Fernando Brito on 02/10/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecordingListViewViewController: UIViewController {
+class RecordingListViewController: UIViewController {
     var viewModel = RecordingListViewModel()
     
     let tableView = UITableView()

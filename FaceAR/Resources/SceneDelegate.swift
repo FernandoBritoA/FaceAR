@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
 
-        let navViewController = UINavigationController(rootViewController: RecordingListViewViewController())
+        let navViewController = UINavigationController(rootViewController: RecordingListViewController())
         window?.rootViewController = navViewController
 
         window?.makeKeyAndVisible()

@@ -23,7 +23,7 @@
 		BF96E8B72ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96E8B62ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift */; };
 		BF96E8BC2ACB34C700ACCCBF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96E8BB2ACB34C700ACCCBF /* UIViewControllerExtension.swift */; };
 		BFAD19DD2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19DC2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift */; };
-		BFAD19E02ACBC1F8008838A7 /* RecordingListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19DF2ACBC1F8008838A7 /* RecordingListViewViewController.swift */; };
+		BFAD19E02ACBC1F8008838A7 /* RecordingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19DF2ACBC1F8008838A7 /* RecordingListViewController.swift */; };
 		BFAD19E32ACBC893008838A7 /* RecordingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19E22ACBC893008838A7 /* RecordingListViewModel.swift */; };
 		BFAD19E52ACBDA14008838A7 /* RecordingListViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19E42ACBDA14008838A7 /* RecordingListViewController+UI.swift */; };
 		BFAD19E72ACBE04B008838A7 /* RecordingListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19E62ACBE04B008838A7 /* RecordingListViewController+TableView.swift */; };
@@ -54,7 +54,7 @@
 		BF96E8B62ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+RecordButtonDelegate.swift"; sourceTree = "<group>"; };
 		BF96E8BB2ACB34C700ACCCBF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BFAD19DC2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryExtension.swift; sourceTree = "<group>"; };
-		BFAD19DF2ACBC1F8008838A7 /* RecordingListViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListViewViewController.swift; sourceTree = "<group>"; };
+		BFAD19DF2ACBC1F8008838A7 /* RecordingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListViewController.swift; sourceTree = "<group>"; };
 		BFAD19E22ACBC893008838A7 /* RecordingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListViewModel.swift; sourceTree = "<group>"; };
 		BFAD19E42ACBDA14008838A7 /* RecordingListViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordingListViewController+UI.swift"; sourceTree = "<group>"; };
 		BFAD19E62ACBE04B008838A7 /* RecordingListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordingListViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		BFAD19DE2ACBC1D5008838A7 /* RecordingListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD19DF2ACBC1F8008838A7 /* RecordingListViewViewController.swift */,
+				BFAD19DF2ACBC1F8008838A7 /* RecordingListViewController.swift */,
 				BFAD19E42ACBDA14008838A7 /* RecordingListViewController+UI.swift */,
 				BFAD19E62ACBE04B008838A7 /* RecordingListViewController+TableView.swift */,
 				BFC54A532ACC86B100681C72 /* RecordingListCell.swift */,
@@ -354,7 +354,7 @@
 				BFAD19E52ACBDA14008838A7 /* RecordingListViewController+UI.swift in Sources */,
 				BF96E8B72ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift in Sources */,
 				BFAD19E32ACBC893008838A7 /* RecordingListViewModel.swift in Sources */,
-				BFAD19E02ACBC1F8008838A7 /* RecordingListViewViewController.swift in Sources */,
+				BFAD19E02ACBC1F8008838A7 /* RecordingListViewController.swift in Sources */,
 				BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */,
 				BFC54A542ACC86B100681C72 /* RecordingListCell.swift in Sources */,
 				BF96E8BC2ACB34C700ACCCBF /* UIViewControllerExtension.swift in Sources */,

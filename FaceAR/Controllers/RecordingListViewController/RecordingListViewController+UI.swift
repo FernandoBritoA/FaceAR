@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension RecordingListViewViewController {
+extension RecordingListViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 

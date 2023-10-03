@@ -9,7 +9,7 @@ import Photos
 import UIKit
 
 class RecordingListViewModel {
-    public weak var delegate: UITableViewController?
+    public weak var delegate: UITableView?
 
     public var videos: [PHAsset] = []
     private var localIdentifiers: [String] = []
@@ -21,9 +21,10 @@ class RecordingListViewModel {
     private func fetchVideos() {
         PHAsset.fetchVideos(withLocalIdentifiers: localIdentifiers) { [weak self] assets in
             self?.videos = assets
+            print(assets.count)
 
             DispatchQueue.main.async {
-                self?.delegate?.tableView.reloadData()
+                self?.delegate?.reloadData()
             }
         }
     }

@@ -5,49 +5,53 @@
 //  Created by Fernando Brito on 02/10/23.
 //
 
-import Photos
 import UIKit
 
-class RecordingListViewViewController: UITableViewController {
+class RecordingListViewViewController: UIViewController {
     var viewModel = RecordingListViewModel()
     
-    let tableViewCellIdentifier = "cell"
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        
+        tableView.estimatedRowHeight = 60.0
+        tableView.separatorStyle = .singleLine
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        return tableView
+    }()
+    
+    let button: UIButton = {
+        let btn = UIButton()
+        
+        var config = UIButton.Configuration.filled()
+        
+        config.title = "New Recording"
+        config.cornerStyle = .large
+        config.baseBackgroundColor = .systemBlue
+        config.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        
+        btn.configuration = config
+        
+        return btn
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "My Recordings"
-        viewModel.delegate = self
+        navigationItem.title = "My Recordings"
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        setupTableView()
+        
+        view.addSubview(tableView)
+        view.addSubview(button)
         
         viewModel.getInitialData()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getNumberOfRows()
-    }
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
         
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier)!
-            
-        let videoAsset = viewModel.getVideo(by: indexPath)
-
-        cell.textLabel?.text = "\(videoAsset.duration) seconds"
-        PHCachingImageManager.default().requestImage(
-            for: videoAsset,
-            targetSize: CGSize(width: 100, height: 100),
-            contentMode: .aspectFill,
-            options: nil)
-        { photo, _ in
-                
-            cell.imageView?.image = photo
-        }
-            
-        return cell
+        viewModel.delegate = tableView
     }
 }

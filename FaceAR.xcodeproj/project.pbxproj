@@ -157,9 +157,6 @@
 				BFE6ED642AC363D200471F75 /* Views */,
 				BFE6ED602AC35A0B00471F75 /* Controllers */,
 				BFE6ED632AC35B2800471F75 /* Resources */,
-				BFE6ED552AC3558500471F75 /* Assets.xcassets */,
-				BFE6ED572AC3558500471F75 /* LaunchScreen.storyboard */,
-				BFE6ED5A2AC3558500471F75 /* Info.plist */,
 			);
 			path = FaceAR;
 			sourceTree = "<group>";
@@ -179,6 +176,9 @@
 				BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */,
 				BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */,
 				BF7FC77A2AC53AD300EBDF11 /* Constants.swift */,
+				BFE6ED552AC3558500471F75 /* Assets.xcassets */,
+				BFE6ED572AC3558500471F75 /* LaunchScreen.storyboard */,
+				BFE6ED5A2AC3558500471F75 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

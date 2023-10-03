@@ -13,6 +13,7 @@ extension RecordingListViewViewController {
 
         setupConstraints()
         tableView.frame = view.bounds
+        tableView.separatorStyle = .none
     }
 
     private func setupConstraints() {

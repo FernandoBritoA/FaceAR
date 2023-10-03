@@ -70,7 +70,10 @@ extension PHAsset {
         func fetch() {
             var assets: [PHAsset] = []
 
-            let fetchResults = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+            let options = PHFetchOptions()
+            options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+
+            let fetchResults = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: options)
 
             fetchResults.enumerateObjects { asset, _, _ in
                 assets.append(asset)
@@ -88,5 +91,22 @@ extension PHAsset {
                     break
             }
         }
+    }
+
+    var originalFilename: String? {
+        var fileName: String?
+
+        if #available(iOS 9.0, *) {
+            let resources = PHAssetResource.assetResources(for: self)
+            if let resource = resources.first {
+                fileName = resource.originalFilename
+            }
+        }
+
+        if fileName == nil {
+            fileName = self.value(forKey: "filename") as? String
+        }
+
+        return fileName
     }
 }

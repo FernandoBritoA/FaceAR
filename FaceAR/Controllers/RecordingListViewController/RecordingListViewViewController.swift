@@ -10,15 +10,7 @@ import UIKit
 class RecordingListViewViewController: UIViewController {
     var viewModel = RecordingListViewModel()
     
-    let tableView: UITableView = {
-        let tableView = UITableView()
-        
-        tableView.estimatedRowHeight = 60.0
-        tableView.separatorStyle = .singleLine
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        return tableView
-    }()
+    let tableView = UITableView()
     
     let button: UIButton = {
         let btn = UIButton()
@@ -39,6 +31,7 @@ class RecordingListViewViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "My Recordings"
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         setupTableView()
         

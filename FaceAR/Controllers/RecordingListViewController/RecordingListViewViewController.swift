@@ -46,6 +46,12 @@ class RecordingListViewViewController: UIViewController {
         view.addSubview(button)
         
         viewModel.getInitialData()
+        
+        button.addAction(UIAction(handler: { [weak self] _ in
+            let vc = VideoViewController()
+            
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }), for: .touchUpInside)
     }
     
     private func setupTableView() {

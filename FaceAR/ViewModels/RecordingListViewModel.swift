@@ -21,7 +21,6 @@ class RecordingListViewModel {
     private func fetchVideos() {
         PHAsset.fetchVideos(withLocalIdentifiers: localIdentifiers) { [weak self] assets in
             self?.videos = assets
-            print(assets.count)
 
             DispatchQueue.main.async {
                 self?.delegate?.reloadData()

@@ -20,11 +20,11 @@ extension VideoViewController: RecordButtonDelegate {
     
     func recordButton(_ recordButton: RecordButton, didChangeState state: RecordState) {
         switch state {
-            case .active:
-                onStartRecording()
-                
-            case .inactive:
-                onStopRecording()
+        case .active:
+            onStartRecording()
+            
+        case .inactive:
+            onStopRecording()
         }
     }
     
@@ -41,8 +41,16 @@ extension VideoViewController: RecordButtonDelegate {
     private func onStopRecording() {
         carouselView.isHidden = false
         
-        sceneView.finishVideoRecording { videoRecording in
-            print(videoRecording.url)
+        sceneView.finishVideoRecording { [weak self] recording in
+            PHPhotoLibrary.shared().saveVideo(with: recording.url, fileName: "myRecording") { result in
+                switch result {
+                case .success(let localIdentifier):
+                    print(localIdentifier)
+                    
+                case .failure:
+                    self?.showToast(message: "Could not save video.", type: .error)
+                }
+            }
         }
     }
 }

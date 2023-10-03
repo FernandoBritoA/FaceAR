@@ -22,6 +22,7 @@
 		BF7FC78B2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */; };
 		BF96E8B72ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96E8B62ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift */; };
 		BF96E8BC2ACB34C700ACCCBF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96E8BB2ACB34C700ACCCBF /* UIViewControllerExtension.swift */; };
+		BFAD19DD2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19DC2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+CarouselViewDelegate.swift"; sourceTree = "<group>"; };
 		BF96E8B62ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+RecordButtonDelegate.swift"; sourceTree = "<group>"; };
 		BF96E8BB2ACB34C700ACCCBF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		BFAD19DC2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryExtension.swift; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				BF96E8BB2ACB34C700ACCCBF /* UIViewControllerExtension.swift */,
+				BFAD19DC2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAD19DD2ACBB75A008838A7 /* PHPhotoLibraryExtension.swift in Sources */,
 				BF7FC7712AC500C300EBDF11 /* CarouselView.swift in Sources */,
 				BF7FC7852AC78CAA00EBDF11 /* MoustacheSCNNode.swift in Sources */,
 				BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */,

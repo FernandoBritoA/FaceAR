@@ -18,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = VideoViewController()
+
+        let navViewController = UINavigationController(rootViewController: RecordingListViewViewController())
+        window?.rootViewController = navViewController
 
         window?.makeKeyAndVisible()
     }

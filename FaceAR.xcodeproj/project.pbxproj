@@ -28,6 +28,9 @@
 		BFAD19E52ACBDA14008838A7 /* RecordingListViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19E42ACBDA14008838A7 /* RecordingListViewController+UI.swift */; };
 		BFAD19E72ACBE04B008838A7 /* RecordingListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD19E62ACBE04B008838A7 /* RecordingListViewController+TableView.swift */; };
 		BFC54A542ACC86B100681C72 /* RecordingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A532ACC86B100681C72 /* RecordingListCell.swift */; };
+		BFC54A562ACC98FB00681C72 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A552ACC98FB00681C72 /* CustomAlertController.swift */; };
+		BFC54A582ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A572ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift */; };
+		BFC54A5A2ACCB12300681C72 /* RecordSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A592ACCB12300681C72 /* RecordSession.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 		BFAD19E42ACBDA14008838A7 /* RecordingListViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordingListViewController+UI.swift"; sourceTree = "<group>"; };
 		BFAD19E62ACBE04B008838A7 /* RecordingListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordingListViewController+TableView.swift"; sourceTree = "<group>"; };
 		BFC54A532ACC86B100681C72 /* RecordingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListCell.swift; sourceTree = "<group>"; };
+		BFC54A552ACC98FB00681C72 /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
+		BFC54A572ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+CustomAlertControllerDelegate.swift"; sourceTree = "<group>"; };
+		BFC54A592ACCB12300681C72 /* RecordSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSession.swift; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 				BF7FC7812AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift */,
 				BF7FC78A2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift */,
 				BF96E8B62ACB303E00ACCCBF /* VideoViewController+RecordButtonDelegate.swift */,
+				BFC54A552ACC98FB00681C72 /* CustomAlertController.swift */,
+				BFC54A572ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift */,
 			);
 			path = VideoViewController;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7FC7842AC78CAA00EBDF11 /* MoustacheSCNNode.swift */,
+				BFC54A592ACCB12300681C72 /* RecordSession.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,6 +352,7 @@
 				BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */,
 				BFE6ED662AC363F900471F75 /* RecordButton.swift in Sources */,
 				BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */,
+				BFC54A5A2ACCB12300681C72 /* RecordSession.swift in Sources */,
 				BF7FC7892AC8F01300EBDF11 /* CarouselView+CollectionView.swift in Sources */,
 				BF7FC7822AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift in Sources */,
 				BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */,
@@ -357,8 +367,10 @@
 				BFAD19E02ACBC1F8008838A7 /* RecordingListViewController.swift in Sources */,
 				BF7FC7792AC5316100EBDF11 /* CarouselConstants.swift in Sources */,
 				BFC54A542ACC86B100681C72 /* RecordingListCell.swift in Sources */,
+				BFC54A562ACC98FB00681C72 /* CustomAlertController.swift in Sources */,
 				BF96E8BC2ACB34C700ACCCBF /* UIViewControllerExtension.swift in Sources */,
 				BF7FC78B2AC8F10F00EBDF11 /* VideoViewController+CarouselViewDelegate.swift in Sources */,
+				BFC54A582ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift in Sources */,
 				BFAD19E72ACBE04B008838A7 /* RecordingListViewController+TableView.swift in Sources */,
 				BF7FC7872AC8EE0F00EBDF11 /* CarouselViewDelegate.swift in Sources */,
 			);

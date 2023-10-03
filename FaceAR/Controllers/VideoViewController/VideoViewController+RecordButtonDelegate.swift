@@ -5,7 +5,6 @@
 //  Created by Fernando Brito on 02/10/23.
 //
 
-import Photos
 import SCNRecorder
 import UIKit
 
@@ -30,6 +29,7 @@ extension VideoViewController: RecordButtonDelegate {
     
     private func onStartRecording() {
         carouselView.isHidden = true
+        navigationController?.isNavigationBarHidden = true
         
         do {
             try sceneView.startVideoRecording()
@@ -40,17 +40,11 @@ extension VideoViewController: RecordButtonDelegate {
     
     private func onStopRecording() {
         carouselView.isHidden = false
+        navigationController?.isNavigationBarHidden = false
         
         sceneView.finishVideoRecording { [weak self] recording in
-            PHPhotoLibrary.shared().saveVideo(with: recording.url, fileName: "myRecording") { result in
-                switch result {
-                case .success(let localIdentifier):
-                    print(localIdentifier)
-                    
-                case .failure:
-                    self?.showToast(message: "Could not save video.", type: .error)
-                }
-            }
+           
+            self?.showAlertController(with: recording)
         }
     }
 }

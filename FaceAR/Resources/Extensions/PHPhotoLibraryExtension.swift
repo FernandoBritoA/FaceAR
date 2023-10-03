@@ -14,28 +14,33 @@ enum SaveError: Error {
 
 extension PHPhotoLibrary {
     func saveVideo(
-        with url: URL,
-        fileName: String,
-        completion: @escaping (Result<String, any Error>) -> Void)
+        with recordingSession: TempRecordingSession,
+        completion: @escaping (Result<SavedRecordingSession, any Error>) -> Void)
     {
-        var localIdentifier = ""
-
         func save() {
+            var localIdentifier = ""
+
             PHPhotoLibrary.shared().performChanges({
                 let options = PHAssetResourceCreationOptions()
-                options.originalFilename = fileName
+                options.originalFilename = recordingSession.tag
 
                 let request = PHAssetCreationRequest.forAsset()
-                request.addResource(with: .video, fileURL: url, options: options)
+                request.addResource(with: .video, fileURL: recordingSession.info.url, options: options)
 
                 let placeHolder = request.placeholderForCreatedAsset
                 localIdentifier = placeHolder?.localIdentifier ?? ""
+
             }) { saved, error in
 
                 if error != nil {
                     completion(.failure(SaveError.assetCreation))
                 } else if saved {
-                    completion(.success(localIdentifier))
+                    let recordSession = SavedRecordingSession(
+                        id: localIdentifier,
+                        tag: recordingSession.tag,
+                        duration: recordingSession.info.duration)
+
+                    completion(.success(recordSession))
                 }
             }
         }

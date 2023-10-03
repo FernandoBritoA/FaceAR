@@ -13,6 +13,7 @@ class VideoViewController: UIViewController {
     let sceneView = ARSCNView()
     let carouselView = CarouselView()
     let recordButton = RecordButton(size: 70.0)
+    let alertController = CustomAlertController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class VideoViewController: UIViewController {
         sceneView.delegate = self
         carouselView.delegete = self
         recordButton.delegete = self
+        alertController.delegate = self
 
         sceneView.prepareForRecording()
     }
@@ -31,6 +33,16 @@ class VideoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        runARSession()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        pauseARSession()
+    }
+
+    internal func runARSession() {
         guard ARFaceTrackingConfiguration.isSupported else { return }
 
         let configuration = ARFaceTrackingConfiguration()
@@ -38,9 +50,7 @@ class VideoViewController: UIViewController {
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
+    internal func pauseARSession() {
         sceneView.session.pause()
     }
 }

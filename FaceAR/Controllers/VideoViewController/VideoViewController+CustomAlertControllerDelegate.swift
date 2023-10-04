@@ -10,6 +10,14 @@ import SCNRecorder
 import UIKit
 
 extension VideoViewController: CustomAlertControllerDelegate {
+    func customAlertController(didChangeShowingState isShowing: Bool) {
+        if isShowing {
+            pauseARSession()
+        } else {
+            runARSession()
+        }
+    }
+
     func customAlertController(didSelectSave session: TempRecordingSession) {
         PHPhotoLibrary.shared().saveVideo(with: session) { result in
             switch result {
@@ -21,15 +29,5 @@ extension VideoViewController: CustomAlertControllerDelegate {
                 self.showToast(message: "Could not save video.", type: .error)
             }
         }
-    }
-
-    func customAlertController(didHideController: Bool) {
-        runARSession()
-    }
-
-    func showAlertController(with recording: VideoRecording.Info) {
-        alertController.addRecordingInfo(recording)
-        present(alertController.alert, animated: true)
-        pauseARSession()
     }
 }

@@ -44,7 +44,7 @@ extension VideoViewController: RecordButtonDelegate {
         
         sceneView.finishVideoRecording { [weak self] recording in
            
-            self?.showAlertController(with: recording)
+            self?.alertController.show(with: recording)
         }
     }
 }

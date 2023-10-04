@@ -8,50 +8,44 @@
 import SCNRecorder
 import UIKit
 
-protocol CustomAlertControllerDelegate: AnyObject {
+protocol CustomAlertControllerDelegate: UIViewController {
+    func customAlertController(didChangeShowingState isShowing: Bool)
     func customAlertController(didSelectSave recordingSession: TempRecordingSession)
-    func customAlertController(didHideController: Bool)
 }
 
 class CustomAlertController {
     weak var delegate: CustomAlertControllerDelegate?
 
-    let alert = UIAlertController(title: "New Recording", message: "Add a tag name to this recording", preferredStyle: .alert)
+    public func show(with recordingInfo: VideoRecording.Info) {
+        let alertVC = UIAlertController(title: "New Recording", message: "Add a tag name to this recording", preferredStyle: .alert)
 
-    var recordingInfo: VideoRecording.Info?
-
-    init() {
-        alert.addTextField { textField in
+        /*
+            NOTE: Adding this textField to the alert introduces a log noise in the console than can be safely ignored.
+            More info: https://stackoverflow.com/a/75246980
+         */
+        alertVC.addTextField { textField in
             textField.placeholder = "Tag"
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [weak self] _ in
-            self?.delegate?.customAlertController(didHideController: true)
+            self?.delegate?.customAlertController(didChangeShowingState: false)
         }
 
         let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
 
-            guard let recordingInfo = self?.recordingInfo else {
-                self?.delegate?.customAlertController(didHideController: true)
-
-                return
-            }
-
-            let tagName = self?.alert.textFields![0].text ?? "Tag"
+            let tagName = alertVC.textFields![0].text ?? "Tag"
+            alertVC.textFields![0].text = ""
 
             let session = TempRecordingSession(tag: tagName, info: recordingInfo)
 
-            self?.alert.textFields![0].text = ""
-
             self?.delegate?.customAlertController(didSelectSave: session)
-            self?.delegate?.customAlertController(didHideController: true)
+            self?.delegate?.customAlertController(didChangeShowingState: false)
         }
 
-        alert.addAction(cancelAction)
-        alert.addAction(saveAction)
-    }
+        alertVC.addAction(cancelAction)
+        alertVC.addAction(saveAction)
 
-    func addRecordingInfo(_ info: VideoRecording.Info) {
-        recordingInfo = info
+        delegate?.present(alertVC, animated: true)
+        delegate?.customAlertController(didChangeShowingState: true)
     }
 }

@@ -38,7 +38,9 @@ class RecordingListViewController: UIViewController {
         view.addSubview(tableView)
         view.addSubview(button)
         
-        viewModel.getInitialData()
+        viewModel.getInitialData { [weak self] error in
+            self?.showToast(message: "Couldn't load videos data. Error: \(error.localizedDescription)", type: .error)
+        }
         
         button.addAction(UIAction(handler: { [weak self] _ in
             let vc = VideoViewController()

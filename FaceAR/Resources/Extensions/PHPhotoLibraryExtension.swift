@@ -69,7 +69,7 @@ extension PHPhotoLibrary {
 
 extension PHAsset {
     static func fetchVideos(
-        withLocalIdentifiers identifiers: [String],
+        with identifiers: [String],
         completion: @escaping ([PHAsset]) -> Void)
     {
         func fetch() {

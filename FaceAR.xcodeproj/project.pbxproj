@@ -162,16 +162,9 @@
 				BFAD19E42ACBDA14008838A7 /* RecordingListViewController+UI.swift */,
 				BFAD19E62ACBE04B008838A7 /* RecordingListViewController+TableView.swift */,
 				BFC54A532ACC86B100681C72 /* RecordingListCell.swift */,
-			);
-			path = RecordingListViewController;
-			sourceTree = "<group>";
-		};
-		BFAD19E12ACBC853008838A7 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
 				BFAD19E22ACBC893008838A7 /* RecordingListViewModel.swift */,
 			);
-			path = ViewModels;
+			path = RecordingListViewController;
 			sourceTree = "<group>";
 		};
 		BFC54A5E2ACD2A9F00681C72 /* Managers */ = {
@@ -204,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				BFC54A5E2ACD2A9F00681C72 /* Managers */,
-				BFAD19E12ACBC853008838A7 /* ViewModels */,
 				BF7FC7832AC78C7200EBDF11 /* Models */,
 				BFE6ED642AC363D200471F75 /* Views */,
 				BFE6ED602AC35A0B00471F75 /* Controllers */,

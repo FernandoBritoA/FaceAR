@@ -19,14 +19,22 @@ extension VideoViewController: CustomAlertControllerDelegate {
     }
 
     func customAlertController(didSelectSave session: TempRecordingSession) {
-        PHPhotoLibrary.shared().saveVideo(with: session) { result in
+        PHPhotoLibrary.shared().saveVideo(with: session) { [weak self] result in
             switch result {
             case .success(let savedSession):
-                print(savedSession)
-                // TODO: Store this session
+                DispatchQueue.main.async {
+                    DataPersistenceManager.shared.saveSessionData(with: savedSession) { result in
+                        switch result {
+                        case .success():
+                            self?.showToast(message: "Video saved!", type: .informative)
+                        case .failure(let error):
+                            self?.showToast(message: "Could not save video, \(error.localizedDescription)", type: .error)
+                        }
+                    }
+                }
 
             case .failure:
-                self.showToast(message: "Could not save video.", type: .error)
+                self?.showToast(message: "Could not save video.", type: .error)
             }
         }
     }

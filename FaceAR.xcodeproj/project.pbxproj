@@ -31,6 +31,8 @@
 		BFC54A562ACC98FB00681C72 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A552ACC98FB00681C72 /* CustomAlertController.swift */; };
 		BFC54A582ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A572ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift */; };
 		BFC54A5A2ACCB12300681C72 /* RecordingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A592ACCB12300681C72 /* RecordingSession.swift */; };
+		BFC54A5D2ACD29D500681C72 /* FaceARModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A5B2ACD29D500681C72 /* FaceARModel.xcdatamodeld */; };
+		BFC54A602ACD2B7B00681C72 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A5F2ACD2B7B00681C72 /* DataPersistenceManager.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		BFC54A552ACC98FB00681C72 /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
 		BFC54A572ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoViewController+CustomAlertControllerDelegate.swift"; sourceTree = "<group>"; };
 		BFC54A592ACCB12300681C72 /* RecordingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSession.swift; sourceTree = "<group>"; };
+		BFC54A5C2ACD29D500681C72 /* FaceARModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FaceARModel.xcdatamodel; sourceTree = "<group>"; };
+		BFC54A5F2ACD2B7B00681C72 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +174,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		BFC54A5E2ACD2A9F00681C72 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BFC54A5F2ACD2B7B00681C72 /* DataPersistenceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		BFE6ED402AC3558400471F75 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +203,7 @@
 		BFE6ED4B2AC3558400471F75 /* FaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				BFC54A5E2ACD2A9F00681C72 /* Managers */,
 				BFAD19E12ACBC853008838A7 /* ViewModels */,
 				BF7FC7832AC78C7200EBDF11 /* Models */,
 				BFE6ED642AC363D200471F75 /* Views */,
@@ -219,6 +232,7 @@
 				BFE6ED552AC3558500471F75 /* Assets.xcassets */,
 				BFE6ED572AC3558500471F75 /* LaunchScreen.storyboard */,
 				BFE6ED5A2AC3558500471F75 /* Info.plist */,
+				BFC54A5B2ACD29D500681C72 /* FaceARModel.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -352,6 +366,7 @@
 				BF7FC7752AC510D000EBDF11 /* CarouselViewModel.swift in Sources */,
 				BFE6ED662AC363F900471F75 /* RecordButton.swift in Sources */,
 				BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */,
+				BFC54A602ACD2B7B00681C72 /* DataPersistenceManager.swift in Sources */,
 				BFC54A5A2ACCB12300681C72 /* RecordingSession.swift in Sources */,
 				BF7FC7892AC8F01300EBDF11 /* CarouselView+CollectionView.swift in Sources */,
 				BF7FC7822AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift in Sources */,
@@ -373,6 +388,7 @@
 				BFC54A582ACCAA3400681C72 /* VideoViewController+CustomAlertControllerDelegate.swift in Sources */,
 				BFAD19E72ACBE04B008838A7 /* RecordingListViewController+TableView.swift in Sources */,
 				BF7FC7872AC8EE0F00EBDF11 /* CarouselViewDelegate.swift in Sources */,
+				BFC54A5D2ACD29D500681C72 /* FaceARModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +604,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFC54A5B2ACD29D500681C72 /* FaceARModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFC54A5C2ACD29D500681C72 /* FaceARModel.xcdatamodel */,
+			);
+			currentVersion = BFC54A5C2ACD29D500681C72 /* FaceARModel.xcdatamodel */;
+			path = FaceARModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFE6ED412AC3558400471F75 /* Project object */;
 }

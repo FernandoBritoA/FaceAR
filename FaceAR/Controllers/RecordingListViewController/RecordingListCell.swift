@@ -11,6 +11,12 @@ import UIKit
 class RecordingListCell: UITableViewCell {
     static var identifier = "RecordingListCell"
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        customizeUI()
+    }
+
     public func configure(with asset: PHAsset) {
         textLabel?.text = asset.originalFilename
         detailTextLabel?.text = formatToTime(duration: asset.duration)
@@ -39,5 +45,24 @@ class RecordingListCell: UITableViewCell {
         formatter.zeroFormattingBehavior = .pad
 
         return formatter.string(from: totalSeconds)!
+    }
+
+    private func customizeUI() {
+        if let textLabel {
+            textLabel.numberOfLines = 2
+            textLabel.font = UIFont.systemFont(ofSize: 20)
+        }
+
+        if let imageView {
+            imageView.clipsToBounds = true
+            imageView.layer.cornerRadius = 8
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+
+            NSLayoutConstraint.activate([
+                imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+                imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+                imageView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            ])
+        }
     }
 }

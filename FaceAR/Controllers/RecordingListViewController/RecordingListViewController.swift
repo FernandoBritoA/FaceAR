@@ -19,7 +19,7 @@ class RecordingListViewController: UIViewController {
         
         config.title = "New Recording"
         config.cornerStyle = .large
-        config.baseBackgroundColor = .systemBlue
+        config.baseBackgroundColor = .systemCyan
         config.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
         
         btn.configuration = config

@@ -14,6 +14,7 @@ extension RecordingListViewController {
         setupConstraints()
         tableView.frame = view.bounds
         tableView.separatorStyle = .singleLine
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
     }
 
     private func setupConstraints() {

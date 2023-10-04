@@ -25,7 +25,8 @@ class RecordingListCell: UITableViewCell {
     }
 
     private func requestImage(for asset: PHAsset) {
-        let size = CGSize(width: 100, height: contentView.frame.height)
+        let frameHeight = contentView.frame.height
+        let size = CGSize(width: frameHeight * 0.56, height: frameHeight)
 
         PHCachingImageManager.default().requestImage(
             for: asset,

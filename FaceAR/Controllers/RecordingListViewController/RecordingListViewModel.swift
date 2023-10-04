@@ -29,7 +29,11 @@ class RecordingListViewModel {
 
     private func fetchVideos(with identifiers: [String]) {
         PHAsset.fetchVideos(with: identifiers) { [weak self] assets in
-            self?.videos += assets
+            guard let videoList = self?.videos else {
+                return
+            }
+
+            self?.videos = assets + videoList
 
             DispatchQueue.main.async {
                 self?.delegate?.reloadData()

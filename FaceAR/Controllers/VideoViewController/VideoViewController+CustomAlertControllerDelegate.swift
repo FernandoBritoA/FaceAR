@@ -26,7 +26,10 @@ extension VideoViewController: CustomAlertControllerDelegate {
                     DataPersistenceManager.shared.saveSessionData(with: savedSession) { result in
                         switch result {
                         case .success():
+                            let recordingIdDict: [String: String] = [MyNotifications.newRecordingIdKey: savedSession.id]
+                            NotificationCenter.default.post(name: MyNotifications.NewRecordingSaved, object: nil, userInfo: recordingIdDict)
                             self?.showToast(message: "Video saved!", type: .informative)
+
                         case .failure(let error):
                             self?.showToast(message: "Could not save video, \(error.localizedDescription)", type: .error)
                         }

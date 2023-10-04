@@ -12,3 +12,8 @@ enum DimensionsK {
     static let screenWidth = UIScreen.main.bounds.width
     static let screenHeigth = UIScreen.main.bounds.height
 }
+
+enum MyNotifications {
+    static let newRecordingIdKey = "newRecordingId"
+    static let NewRecordingSaved = NSNotification.Name("NewRecordingSaved")
+}

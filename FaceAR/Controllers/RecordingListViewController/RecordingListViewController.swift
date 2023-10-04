@@ -34,13 +34,10 @@ class RecordingListViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         setupTableView()
+        configureDataBase()
         
         view.addSubview(tableView)
         view.addSubview(button)
-        
-        viewModel.getInitialData { [weak self] error in
-            self?.showToast(message: "Couldn't load videos data. Error: \(error.localizedDescription)", type: .error)
-        }
         
         button.addAction(UIAction(handler: { [weak self] _ in
             let vc = VideoViewController()
@@ -54,5 +51,17 @@ class RecordingListViewController: UIViewController {
         tableView.dataSource = self
         
         viewModel.delegate = tableView
+    }
+    
+    private func configureDataBase() {
+        viewModel.getInitialData { [weak self] error in
+            self?.showToast(message: "Couldn't load videos data. Error: \(error.localizedDescription)", type: .error)
+        }
+        
+        NotificationCenter.default.addObserver(forName: MyNotifications.NewRecordingSaved, object: nil, queue: nil) { [weak self] notification in
+            if let id = notification.userInfo?[MyNotifications.newRecordingIdKey] as? String {
+                self?.viewModel.addNew(identifier: id)
+            }
+        }
     }
 }

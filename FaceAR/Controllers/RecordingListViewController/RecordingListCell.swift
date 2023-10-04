@@ -33,13 +33,11 @@ class RecordingListCell: UITableViewCell {
     }
 
     private func formatToTime(duration totalSeconds: TimeInterval) -> String {
-        if totalSeconds < 60 {
-            return "\(totalSeconds) s"
-        }
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.unitsStyle = .positional
+        formatter.zeroFormattingBehavior = .pad
 
-        let minutes = Int(totalSeconds) / 60
-        let seconds = Int(totalSeconds) % 60
-
-        return "\(minutes):\(seconds)"
+        return formatter.string(from: totalSeconds)!
     }
 }

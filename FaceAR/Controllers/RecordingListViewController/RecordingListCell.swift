@@ -17,11 +17,11 @@ class RecordingListCell: UITableViewCell {
         customizeUI()
     }
 
-    public func configure(with asset: PHAsset) {
-        textLabel?.text = asset.originalFilename
-        detailTextLabel?.text = formatToTime(duration: asset.duration)
+    public func configure(with video: PlayableVideo) {
+        textLabel?.text = video.tag
+        detailTextLabel?.text = formatToTime(duration: video.duration)
 
-        requestImage(for: asset)
+        requestImage(for: video.videoAsset)
     }
 
     private func requestImage(for asset: PHAsset) {

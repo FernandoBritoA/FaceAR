@@ -11,29 +11,48 @@ import UIKit
 class RecordingListViewModel {
     public weak var delegate: UITableView?
 
-    public var videos: [PHAsset] = []
+    public var videos: [PlayableVideo] = []
 
     public func getInitialData(onError: @escaping (Error) -> Void) {
         DataPersistenceManager.shared.fetchingRecordingsFromDataBase { [weak self] result in
             switch result {
             case .success(let recordingSessions):
-                let identifiers = recordingSessions.map { session in
-                    session.id!
-                }
-                self?.fetchVideos(with: identifiers)
+
+                self?.fetchVideoAssets(for: recordingSessions)
             case .failure(let error):
                 onError(error)
             }
         }
     }
 
-    private func fetchVideos(with identifiers: [String]) {
+    private func fetchVideoAssets(for recordingSessions: [RecordingSession]) {
+        let identifiers: [String] = recordingSessions.map { session in
+            session.id ?? ""
+        }
+
         PHAsset.fetchVideos(with: identifiers) { [weak self] assets in
             guard let videoList = self?.videos else {
                 return
             }
 
-            self?.videos = assets + videoList
+            var newVideos: [PlayableVideo] = []
+
+            let lastIndex = recordingSessions.count - 1
+            Array(0 ... lastIndex).forEach { index in
+
+                let currentAsset = assets[index]
+                let currentSession = recordingSessions[index]
+
+                let playableVideo = PlayableVideo(
+                    id: currentSession.id!,
+                    tag: currentSession.tag!,
+                    duration: currentSession.duration,
+                    videoAsset: currentAsset)
+
+                newVideos.insert(playableVideo, at: 0)
+            }
+
+            self?.videos = newVideos + videoList
 
             DispatchQueue.main.async {
                 self?.delegate?.reloadData()
@@ -41,8 +60,8 @@ class RecordingListViewModel {
         }
     }
 
-    public func addNew(identifier: String) {
-        fetchVideos(with: [identifier])
+    public func addNew(session: RecordingSession) {
+        fetchVideoAssets(for: [session])
     }
 }
 
@@ -52,7 +71,7 @@ extension RecordingListViewModel {
         return videos.count
     }
 
-    public func getVideo(by indexPath: IndexPath) -> PHAsset {
+    public func getVideo(by indexPath: IndexPath) -> PlayableVideo {
         return videos[indexPath.row]
     }
 }

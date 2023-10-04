@@ -20,9 +20,9 @@ extension RecordingListViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecordingListCell(style: .subtitle, reuseIdentifier: RecordingListCell.identifier)
         
-        let videoAsset = viewModel.getVideo(by: indexPath)
+        let video = viewModel.getVideo(by: indexPath)
         
-        cell.configure(with: videoAsset)
+        cell.configure(with: video)
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -31,9 +31,9 @@ extension RecordingListViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let videoAsset = viewModel.getVideo(by: indexPath)
+        let video = viewModel.getVideo(by: indexPath)
         
-        PHCachingImageManager.default().requestAVAsset(forVideo: videoAsset, options: nil) { [weak self] video, _, _ in
+        PHCachingImageManager.default().requestAVAsset(forVideo: video.videoAsset, options: nil) { [weak self] video, _, _ in
             if let video = video {
                 DispatchQueue.main.async {
                     self?.playVideo(video)

@@ -5,8 +5,8 @@
 //  Created by Fernando Brito on 03/10/23.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 enum DatabaseError: Error {
     case failedToSaveData
@@ -16,7 +16,7 @@ enum DatabaseError: Error {
 class DataPersistenceManager {
     static let shared = DataPersistenceManager()
     
-    func saveSessionData(with model: SavedRecordingSession, completion: @escaping (Result<Void, Error>) -> Void){
+    func saveSessionData(with model: SavedRecordingSession, completion: @escaping (Result<RecordingSession, Error>) -> Void) {
         // Reference to the app delegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -31,17 +31,16 @@ class DataPersistenceManager {
         item.duration = model.duration
         item.tag = model.tag
         
-        do{
+        do {
             try context.save()
             
-            completion(.success(()))
+            completion(.success(item))
         } catch {
             completion(.failure(DatabaseError.failedToSaveData))
         }
-        
     }
     
-    func fetchingRecordingsFromDataBase(completion: @escaping (Result<[RecordingSession], Error>) -> Void){
+    func fetchingRecordingsFromDataBase(completion: @escaping (Result<[RecordingSession], Error>) -> Void) {
         // Reference to the app delegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -56,7 +55,6 @@ class DataPersistenceManager {
             
             completion(.success(recordings))
         } catch {
-            
             completion(.failure(DatabaseError.failedToFetchData))
         }
     }

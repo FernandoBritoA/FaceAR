@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Photos
 import SCNRecorder
 
 struct TempRecordingSession {
@@ -17,4 +18,11 @@ struct SavedRecordingSession {
     let id: String
     let tag: String
     let duration: TimeInterval
+}
+
+struct PlayableVideo {
+    let id: String
+    let tag: String
+    let duration: TimeInterval
+    let videoAsset: PHAsset
 }

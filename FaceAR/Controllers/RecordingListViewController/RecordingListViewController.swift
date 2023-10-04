@@ -59,8 +59,8 @@ class RecordingListViewController: UIViewController {
         }
         
         NotificationCenter.default.addObserver(forName: MyNotifications.NewRecordingSaved, object: nil, queue: nil) { [weak self] notification in
-            if let id = notification.userInfo?[MyNotifications.newRecordingIdKey] as? String {
-                self?.viewModel.addNew(identifier: id)
+            if let session = notification.userInfo?[MyNotifications.newRecordingIdKey] as? RecordingSession {
+                self?.viewModel.addNew(session: session)
             }
         }
     }

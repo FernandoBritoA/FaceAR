@@ -15,7 +15,7 @@ enum ToastType {
 extension UIViewController {
     func showToast(message: String, type: ToastType) {
         let padding = 5.0
-        let verticalOffset = 50.0
+        let verticalOffset = 120.0
         let horizontalOffset = 20.0
         let bgColor: UIColor = type == .informative ? .black : .systemRed
 

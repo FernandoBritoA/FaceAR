@@ -36,6 +36,7 @@
 		BFCDA1252ACE628A0063F82B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA1242ACE628A0063F82B /* UITableViewExtension.swift */; };
 		BFCDA1272ACE637E0063F82B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA1262ACE637E0063F82B /* ArrayExtension.swift */; };
 		BFCDA1292ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA1282ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift */; };
+		BFCDA12D2ACE7BAA0063F82B /* face-ar-demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA12C2ACE7BAA0063F82B /* face-ar-demo.gif */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		BFCDA1242ACE628A0063F82B /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		BFCDA1262ACE637E0063F82B /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		BFCDA1282ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordingListViewController+VideoViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		BFCDA12C2ACE7BAA0063F82B /* face-ar-demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "face-ar-demo.gif"; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		BFCDA12A2ACE7A0F0063F82B /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDA12C2ACE7BAA0063F82B /* face-ar-demo.gif */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		BFE6ED402AC3558400471F75 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 		BFE6ED4B2AC3558400471F75 /* FaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				BFCDA12A2ACE7A0F0063F82B /* Demo */,
 				BFC54A5E2ACD2A9F00681C72 /* Managers */,
 				BF7FC7832AC78C7200EBDF11 /* Models */,
 				BFE6ED642AC363D200471F75 /* Views */,
@@ -307,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFCDA12D2ACE7BAA0063F82B /* face-ar-demo.gif in Resources */,
 				BFE6ED592AC3558500471F75 /* LaunchScreen.storyboard in Resources */,
 				BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */,
 			);

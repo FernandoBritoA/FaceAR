@@ -26,12 +26,16 @@ class RecordingListViewModel {
     }
 
     private func fetchVideoAssets(for recordingSessions: [RecordingSession]) {
+        guard recordingSessions.count > 0 else {
+            return
+        }
+
         let identifiers: [String] = recordingSessions.map { session in
             session.id ?? ""
         }
 
         PHAsset.fetchVideos(with: identifiers) { [weak self] assets in
-            guard let videoList = self?.videos, identifiers.count > 0 else {
+            guard let videoList = self?.videos, recordingSessions.count == assets.count else {
                 return
             }
 

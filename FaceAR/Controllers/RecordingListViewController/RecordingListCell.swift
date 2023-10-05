@@ -9,6 +9,7 @@ import Photos
 import UIKit
 
 class RecordingListCell: UITableViewCell {
+    let imageWidthProportion = 0.56
     static var identifier = "RecordingListCell"
 
     override func layoutSubviews() {
@@ -25,8 +26,12 @@ class RecordingListCell: UITableViewCell {
     }
 
     private func requestImage(for asset: PHAsset) {
+        // Placeholder
+        imageView?.image = UIImage(named: "emptyPortrait")
+        imageView?.contentMode = .scaleAspectFill
+
         let frameHeight = contentView.frame.height
-        let size = CGSize(width: frameHeight * 0.56, height: frameHeight)
+        let size = CGSize(width: frameHeight * imageWidthProportion, height: frameHeight)
 
         PHCachingImageManager.default().requestImage(
             for: asset,
@@ -35,7 +40,9 @@ class RecordingListCell: UITableViewCell {
             options: nil)
         { [weak self] photo, _ in
 
-            self?.imageView?.image = photo
+            if let photo {
+                self?.imageView?.image = photo
+            }
         }
     }
 
@@ -63,6 +70,7 @@ class RecordingListCell: UITableViewCell {
                 imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
                 imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
                 imageView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+                imageView.widthAnchor.constraint(equalToConstant: contentView.frame.height * imageWidthProportion),
             ])
         }
     }

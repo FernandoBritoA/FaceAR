@@ -31,13 +31,13 @@ class RecordingListViewModel {
         }
 
         PHAsset.fetchVideos(with: identifiers) { [weak self] assets in
-            guard let videoList = self?.videos else {
+            guard let videoList = self?.videos, identifiers.count > 0 else {
                 return
             }
 
             var newVideos: [PlayableVideo] = []
 
-            let lastIndex = recordingSessions.count - 1
+            let lastIndex = recordingSessions.getLastIndex()
             Array(0 ... lastIndex).forEach { index in
 
                 let currentAsset = assets[index]

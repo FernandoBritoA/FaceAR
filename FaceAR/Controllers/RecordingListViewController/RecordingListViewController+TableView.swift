@@ -14,7 +14,15 @@ extension RecordingListViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getNumberOfRows()
+        let totalRows = viewModel.getNumberOfRows()
+        
+        if totalRows == 0 {
+            self.tableView.setEmptyMessage("No Recordings Yet")
+        } else {
+            self.tableView.restore()
+        }
+        
+        return totalRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

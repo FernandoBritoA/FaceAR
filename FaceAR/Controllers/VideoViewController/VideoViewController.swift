@@ -17,6 +17,7 @@ class VideoViewController: UIViewController {
     weak var delegate: VideoViewControllerDelegate?
 
     let sceneView = ARSCNView()
+    var captureSession: AVCaptureSession?
     let carouselView = CarouselView()
     let recordButton = RecordButton(size: 70.0)
     let alertController = CustomAlertController()
@@ -34,6 +35,7 @@ class VideoViewController: UIViewController {
         alertController.delegate = self
 
         sceneView.prepareForRecording()
+        captureSession = try? .makeAudioForRecorder(sceneView.recorder!)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +54,7 @@ class VideoViewController: UIViewController {
         guard ARFaceTrackingConfiguration.isSupported else { return }
 
         let configuration = ARFaceTrackingConfiguration()
+        configuration.providesAudioData = true
 
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }

@@ -9,7 +9,13 @@ import ARKit
 import SCNRecorder
 import UIKit
 
+protocol VideoViewControllerDelegate: UIViewController {
+    func videoViewController(didFailWithError error: Error)
+}
+
 class VideoViewController: UIViewController {
+    weak var delegate: VideoViewControllerDelegate?
+
     let sceneView = ARSCNView()
     let carouselView = CarouselView()
     let recordButton = RecordButton(size: 70.0)

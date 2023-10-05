@@ -41,4 +41,9 @@ extension VideoViewController: ARSCNViewDelegate {
 
         faceGeometry.update(from: faceAnchor.geometry)
     }
+
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        delegate?.videoViewController(didFailWithError: error)
+        navigationController?.popViewController(animated: true)
+    }
 }

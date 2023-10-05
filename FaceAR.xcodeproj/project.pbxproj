@@ -35,6 +35,7 @@
 		BFC54A602ACD2B7B00681C72 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC54A5F2ACD2B7B00681C72 /* DataPersistenceManager.swift */; };
 		BFCDA1252ACE628A0063F82B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA1242ACE628A0063F82B /* UITableViewExtension.swift */; };
 		BFCDA1272ACE637E0063F82B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA1262ACE637E0063F82B /* ArrayExtension.swift */; };
+		BFCDA1292ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA1282ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift */; };
 		BFE6ED4D2AC3558400471F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */; };
 		BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */; };
 		BFE6ED562AC3558500471F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE6ED552AC3558500471F75 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		BFC54A5F2ACD2B7B00681C72 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		BFCDA1242ACE628A0063F82B /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		BFCDA1262ACE637E0063F82B /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		BFCDA1282ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordingListViewController+VideoViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		BFE6ED492AC3558400471F75 /* FaceAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE6ED4C2AC3558400471F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE6ED4E2AC3558400471F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				BFAD19E62ACBE04B008838A7 /* RecordingListViewController+TableView.swift */,
 				BFC54A532ACC86B100681C72 /* RecordingListCell.swift */,
 				BFAD19E22ACBC893008838A7 /* RecordingListViewModel.swift */,
+				BFCDA1282ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift */,
 			);
 			path = RecordingListViewController;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				BF7FC7822AC785E600EBDF11 /* VideoViewController+ARSCNViewDelegate.swift in Sources */,
 				BF7FC7732AC5019600EBDF11 /* CarouselCell.swift in Sources */,
 				BF7FC77B2AC53AD300EBDF11 /* Constants.swift in Sources */,
+				BFCDA1292ACE6F970063F82B /* RecordingListViewController+VideoViewControllerDelegate.swift in Sources */,
 				BFE6ED622AC35A4400471F75 /* VideoViewController.swift in Sources */,
 				BF7FC7772AC5306E00EBDF11 /* CarouselView+ScrollView.swift in Sources */,
 				BFE6ED4F2AC3558400471F75 /* SceneDelegate.swift in Sources */,

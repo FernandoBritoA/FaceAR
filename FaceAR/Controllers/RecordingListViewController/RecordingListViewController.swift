@@ -41,6 +41,7 @@ class RecordingListViewController: UIViewController {
         
         button.addAction(UIAction(handler: { [weak self] _ in
             let vc = VideoViewController()
+            vc.delegate = self
             
             self?.navigationController?.pushViewController(vc, animated: true)
         }), for: .touchUpInside)
